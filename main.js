@@ -53,24 +53,22 @@ function movieInfo (movie) {
 }
 
 function allMovies (movies) {
-    const ul = document.querySelector('#allMovies')
     for (let i = 0; i < movies.length; i++) {
         const li = document.createElement('li')
         li.innerHTML = JSON.stringify(movies[i])
-        ul.appendChild(li)
+        ulGlobal.appendChild(li)
     }
 }
 
 function newerMovies () {
     const newerButton = document.querySelector('#newerButton')
-    const ul = document.querySelector('#allMovies')
     newerButton.addEventListener('click', function (){
         ulGlobal.innerHTML = ""
             for (let i = 0; i < antesCanvasGlobal.length; i++) {
                 if (antesCanvasGlobal[i].year >= '2014' ) {
                 const li = document.createElement('li')
                 li.innerHTML = JSON.stringify(antesCanvasGlobal[i])
-                ul.appendChild(li)
+                ulGlobal.appendChild(li)
             }
         }
     })
