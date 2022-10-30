@@ -45,6 +45,7 @@ fetch('https://gist.githubusercontent.com/pankaj28843/08f397fcea7c760a99206bcb0a
         movieInfo(antesCanvas[0])
         allMovies(antesCanvas)
         newerMovies(antesCanvas[0])
+        search(antesCanvas[0])
     });
 
 function movieInfo (movie) {
@@ -73,6 +74,24 @@ function newerMovies () {
         }
     })
 }
+
+/*
+
+function search () {
+    let inputSearch = document.querySelector('#inputSearch').value
+    inputSearch = inputSearch.toLowerCase();
+    for (i = 0; i < antesCanvasGlobal.length; i++) {
+        if (antesCanvasGlobal[i].innerHTML.toLowerCase().includes(inputSearch)) {
+            antesCanvasGlobal[i].style.display = 'none';
+        }
+        else {
+            antesCanvasGlobal[i].style.display = ''
+        }
+    }
+}
+
+ */
+
 
 
 
